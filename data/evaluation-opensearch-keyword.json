@@ -1,0 +1,432 @@
+{
+  "generatedAt": "2026-09-09T20:00:47.889Z",
+  "backend": "opensearch",
+  "mode": "keyword",
+  "qualification": "Synthetic skill-based sanity benchmark. Not a human-judged ranking evaluation. Ten holdout queries are paraphrases of development topics, not independent unseen domains.",
+  "queries": 30,
+  "precisionAt5": 1,
+  "meanLatencyMs": 8.466666666666667,
+  "embeddingTokens": 0,
+  "rows": [
+    {
+      "query": "Find engineers building Python backend services",
+      "split": "development",
+      "precisionAt5": 1,
+      "elapsedMs": 53,
+      "embeddingTokens": 0,
+      "topIds": [
+        "tl-217",
+        "tl-229",
+        "tl-157",
+        "tl-169",
+        "tl-097"
+      ]
+    },
+    {
+      "query": "Looking for experience in Python backend services",
+      "split": "development",
+      "precisionAt5": 1,
+      "elapsedMs": 15,
+      "embeddingTokens": 0,
+      "topIds": [
+        "tl-217",
+        "tl-229",
+        "tl-157",
+        "tl-169",
+        "tl-097"
+      ]
+    },
+    {
+      "query": "Python backend services",
+      "split": "holdout",
+      "precisionAt5": 1,
+      "elapsedMs": 11,
+      "embeddingTokens": 0,
+      "topIds": [
+        "tl-217",
+        "tl-229",
+        "tl-157",
+        "tl-169",
+        "tl-097"
+      ]
+    },
+    {
+      "query": "Find engineers building data pipelines with orchestration",
+      "split": "development",
+      "precisionAt5": 1,
+      "elapsedMs": 10,
+      "embeddingTokens": 0,
+      "topIds": [
+        "tl-218",
+        "tl-230",
+        "tl-158",
+        "tl-170",
+        "tl-098"
+      ]
+    },
+    {
+      "query": "Looking for experience in data pipelines with orchestration",
+      "split": "development",
+      "precisionAt5": 1,
+      "elapsedMs": 10,
+      "embeddingTokens": 0,
+      "topIds": [
+        "tl-314",
+        "tl-074",
+        "tl-014",
+        "tl-134",
+        "tl-194"
+      ]
+    },
+    {
+      "query": "data pipelines with orchestration",
+      "split": "holdout",
+      "precisionAt5": 1,
+      "elapsedMs": 9,
+      "embeddingTokens": 0,
+      "topIds": [
+        "tl-218",
+        "tl-230",
+        "tl-158",
+        "tl-170",
+        "tl-098"
+      ]
+    },
+    {
+      "query": "Find engineers building accessible frontend applications",
+      "split": "development",
+      "precisionAt5": 1,
+      "elapsedMs": 8,
+      "embeddingTokens": 0,
+      "topIds": [
+        "tl-219",
+        "tl-231",
+        "tl-159",
+        "tl-171",
+        "tl-099"
+      ]
+    },
+    {
+      "query": "Looking for experience in accessible frontend applications",
+      "split": "development",
+      "precisionAt5": 1,
+      "elapsedMs": 7,
+      "embeddingTokens": 0,
+      "topIds": [
+        "tl-219",
+        "tl-231",
+        "tl-159",
+        "tl-171",
+        "tl-099"
+      ]
+    },
+    {
+      "query": "accessible frontend applications",
+      "split": "holdout",
+      "precisionAt5": 1,
+      "elapsedMs": 6,
+      "embeddingTokens": 0,
+      "topIds": [
+        "tl-219",
+        "tl-231",
+        "tl-159",
+        "tl-171",
+        "tl-099"
+      ]
+    },
+    {
+      "query": "Find engineers building cloud infrastructure provisioning",
+      "split": "development",
+      "precisionAt5": 1,
+      "elapsedMs": 6,
+      "embeddingTokens": 0,
+      "topIds": [
+        "tl-214",
+        "tl-226",
+        "tl-238",
+        "tl-154",
+        "tl-166"
+      ]
+    },
+    {
+      "query": "Looking for experience in cloud infrastructure provisioning",
+      "split": "development",
+      "precisionAt5": 1,
+      "elapsedMs": 7,
+      "embeddingTokens": 0,
+      "topIds": [
+        "tl-214",
+        "tl-226",
+        "tl-238",
+        "tl-154",
+        "tl-166"
+      ]
+    },
+    {
+      "query": "cloud infrastructure provisioning",
+      "split": "holdout",
+      "precisionAt5": 1,
+      "elapsedMs": 6,
+      "embeddingTokens": 0,
+      "topIds": [
+        "tl-214",
+        "tl-226",
+        "tl-238",
+        "tl-154",
+        "tl-166"
+      ]
+    },
+    {
+      "query": "Find engineers building machine learning model serving",
+      "split": "development",
+      "precisionAt5": 1,
+      "elapsedMs": 7,
+      "embeddingTokens": 0,
+      "topIds": [
+        "tl-221",
+        "tl-233",
+        "tl-161",
+        "tl-173",
+        "tl-101"
+      ]
+    },
+    {
+      "query": "Looking for experience in machine learning model serving",
+      "split": "development",
+      "precisionAt5": 1,
+      "elapsedMs": 8,
+      "embeddingTokens": 0,
+      "topIds": [
+        "tl-221",
+        "tl-233",
+        "tl-161",
+        "tl-173",
+        "tl-101"
+      ]
+    },
+    {
+      "query": "machine learning model serving",
+      "split": "holdout",
+      "precisionAt5": 1,
+      "elapsedMs": 5,
+      "embeddingTokens": 0,
+      "topIds": [
+        "tl-221",
+        "tl-233",
+        "tl-161",
+        "tl-173",
+        "tl-101"
+      ]
+    },
+    {
+      "query": "Find engineers building document search ranking",
+      "split": "development",
+      "precisionAt5": 1,
+      "elapsedMs": 6,
+      "embeddingTokens": 0,
+      "topIds": [
+        "tl-234",
+        "tl-174",
+        "tl-114",
+        "tl-054",
+        "tl-294"
+      ]
+    },
+    {
+      "query": "Looking for experience in document search ranking",
+      "split": "development",
+      "precisionAt5": 1,
+      "elapsedMs": 7,
+      "embeddingTokens": 0,
+      "topIds": [
+        "tl-234",
+        "tl-174",
+        "tl-114",
+        "tl-054",
+        "tl-294"
+      ]
+    },
+    {
+      "query": "document search ranking",
+      "split": "holdout",
+      "precisionAt5": 1,
+      "elapsedMs": 7,
+      "embeddingTokens": 0,
+      "topIds": [
+        "tl-234",
+        "tl-174",
+        "tl-114",
+        "tl-054",
+        "tl-294"
+      ]
+    },
+    {
+      "query": "Find engineers building full stack web applications",
+      "split": "development",
+      "precisionAt5": 1,
+      "elapsedMs": 5,
+      "embeddingTokens": 0,
+      "topIds": [
+        "tl-211",
+        "tl-223",
+        "tl-235",
+        "tl-151",
+        "tl-163"
+      ]
+    },
+    {
+      "query": "Looking for experience in full stack web applications",
+      "split": "development",
+      "precisionAt5": 1,
+      "elapsedMs": 7,
+      "embeddingTokens": 0,
+      "topIds": [
+        "tl-211",
+        "tl-223",
+        "tl-235",
+        "tl-151",
+        "tl-163"
+      ]
+    },
+    {
+      "query": "full stack web applications",
+      "split": "holdout",
+      "precisionAt5": 1,
+      "elapsedMs": 5,
+      "embeddingTokens": 0,
+      "topIds": [
+        "tl-211",
+        "tl-223",
+        "tl-235",
+        "tl-151",
+        "tl-163"
+      ]
+    },
+    {
+      "query": "Find engineers building streaming event data pipelines",
+      "split": "development",
+      "precisionAt5": 1,
+      "elapsedMs": 6,
+      "embeddingTokens": 0,
+      "topIds": [
+        "tl-212",
+        "tl-224",
+        "tl-236",
+        "tl-152",
+        "tl-164"
+      ]
+    },
+    {
+      "query": "Looking for experience in streaming event data pipelines",
+      "split": "development",
+      "precisionAt5": 1,
+      "elapsedMs": 6,
+      "embeddingTokens": 0,
+      "topIds": [
+        "tl-212",
+        "tl-224",
+        "tl-236",
+        "tl-152",
+        "tl-164"
+      ]
+    },
+    {
+      "query": "streaming event data pipelines",
+      "split": "holdout",
+      "precisionAt5": 1,
+      "elapsedMs": 6,
+      "embeddingTokens": 0,
+      "topIds": [
+        "tl-212",
+        "tl-224",
+        "tl-236",
+        "tl-152",
+        "tl-164"
+      ]
+    },
+    {
+      "query": "Find engineers building native mobile applications",
+      "split": "development",
+      "precisionAt5": 1,
+      "elapsedMs": 4,
+      "embeddingTokens": 0,
+      "topIds": [
+        "tl-213",
+        "tl-225",
+        "tl-237",
+        "tl-153",
+        "tl-165"
+      ]
+    },
+    {
+      "query": "Looking for experience in native mobile applications",
+      "split": "development",
+      "precisionAt5": 1,
+      "elapsedMs": 6,
+      "embeddingTokens": 0,
+      "topIds": [
+        "tl-321",
+        "tl-081",
+        "tl-021",
+        "tl-141",
+        "tl-201"
+      ]
+    },
+    {
+      "query": "native mobile applications",
+      "split": "holdout",
+      "precisionAt5": 1,
+      "elapsedMs": 4,
+      "embeddingTokens": 0,
+      "topIds": [
+        "tl-213",
+        "tl-225",
+        "tl-237",
+        "tl-153",
+        "tl-165"
+      ]
+    },
+    {
+      "query": "Find engineers building analytics data warehouse modeling",
+      "split": "development",
+      "precisionAt5": 1,
+      "elapsedMs": 6,
+      "embeddingTokens": 0,
+      "topIds": [
+        "tl-215",
+        "tl-227",
+        "tl-239",
+        "tl-155",
+        "tl-167"
+      ]
+    },
+    {
+      "query": "Looking for experience in analytics data warehouse modeling",
+      "split": "development",
+      "precisionAt5": 1,
+      "elapsedMs": 6,
+      "embeddingTokens": 0,
+      "topIds": [
+        "tl-215",
+        "tl-227",
+        "tl-239",
+        "tl-155",
+        "tl-167"
+      ]
+    },
+    {
+      "query": "analytics data warehouse modeling",
+      "split": "holdout",
+      "precisionAt5": 1,
+      "elapsedMs": 5,
+      "embeddingTokens": 0,
+      "topIds": [
+        "tl-215",
+        "tl-227",
+        "tl-239",
+        "tl-155",
+        "tl-167"
+      ]
+    }
+  ]
+}
