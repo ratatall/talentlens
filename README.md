@@ -1,5 +1,7 @@
 # TalentLens
 
+[![CI](https://github.com/ratatall/talentlens/actions/workflows/ci.yml/badge.svg)](https://github.com/ratatall/talentlens/actions/workflows/ci.yml)
+
 A recruiting search portfolio project built with **Next.js 16, React 19, TypeScript, Node.js route handlers, and OpenSearch**. Candidate explanations are exact source excerpts, and relevance feedback proposes explicit skill priorities for the user to accept.
 
 ## Run immediately
@@ -85,6 +87,12 @@ npm run evaluate -- --hybrid
 ```
 
 Evaluation reports are saved in `data/evaluation-<backend>-<mode>.json`, with precision@5, response latency, embedding-token usage, and ranked IDs. **These labels are skill-based synthetic sanity checks, not independent recruiter judgments.** Ten held-out paraphrases share topics with development queries. Do not report these scores as real-world hiring quality or claim a hybrid improvement without running both modes on an independently judged dataset. Provider dollar cost is not estimated; token usage is recorded for reconciliation with actual billing.
+
+## CI and independent evaluation
+
+GitHub Actions runs lint, type checks, unit/contract tests, and a production build on every push and pull request. A separate job starts OpenSearch, seeds the corpus, exercises real BM25 and filtered vector retrieval with fixed test vectors, and uploads the synthetic sanity benchmark. CI does not use paid API keys.
+
+The [paired evaluation protocol](docs/EVALUATION.md) adds frozen query briefs, blinded human judgment packets, precision@5, pooled nDCG@5, latency percentiles, and explicit token-cost estimates. **Paid collection and independent human relevance judgments are still pending; no semantic quality improvement is claimed.**
 
 ## Current boundaries
 

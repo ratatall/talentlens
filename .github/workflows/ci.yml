@@ -1,0 +1,71 @@
+name: CI
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  quality:
+    name: Lint, types, tests, and production build
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      SEARCH_BACKEND: demo
+      OPENAI_API_KEY: ''
+      NEXT_TELEMETRY_DISABLED: '1'
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run typecheck
+      - run: npm test
+      - run: npm run build
+  opensearch:
+    name: Real OpenSearch integration
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      SEARCH_BACKEND: opensearch
+      OPENSEARCH_URL: http://127.0.0.1:9200
+      OPENSEARCH_INDEX: talentlens-ci
+      OPENAI_API_KEY: ''
+      RUN_OPENSEARCH_TESTS: '1'
+    services:
+      search:
+        image: opensearchproject/opensearch:2.19.3
+        env:
+          discovery.type: single-node
+          DISABLE_INSTALL_DEMO_CONFIG: 'true'
+          DISABLE_SECURITY_PLUGIN: 'true'
+          OPENSEARCH_JAVA_OPTS: -Xms512m -Xmx512m
+        ports:
+          - 9200:9200
+        options: >-
+          --health-cmd "curl -fsS http://localhost:9200/_cluster/health || exit 1"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 30
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      - run: npm run seed
+      - run: npm test
+      - name: Run synthetic sanity benchmark (not human relevance evaluation)
+        run: npm run evaluate
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: opensearch-sanity-benchmark
+          path: data/evaluation-opensearch-keyword.json
+          retention-days: 14
